@@ -13,31 +13,44 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import AutomationTraining.PageObjects.LandingPage;
-import AutomationTraining.PageObjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandAloneTest {
+public class StandAloneTestOriginal {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
-		String productName = "ADIDAS ORIGINAL";
-		LandingPage lp = new LandingPage(driver);
-//		lp.goTo();
 		driver.get("https://rahulshettyacademy.com/client");
-		lp.loginApplication("testuser123@mail.com", "TestUser@123");
-		ProductCatalogue pc = new ProductCatalogue(driver);
-		List<WebElement> products =  pc.getProductList();
-		pc.addProductToCart(productName);
-		
+		driver.findElement(By.id("userEmail")).sendKeys("testuser123@mail.com");
+		driver.findElement(By.id("userPassword")).sendKeys("TestUser@123");
+		driver.findElement(By.id("login")).click();
+		List<WebElement> products = driver.findElements(By.cssSelector(".col-lg-4"));
+//		List<WebElement> products = driver.findElements(By.xpath("//div[contains(@class,'col-lg-4')]"));
+//		for(WebElement product : products) {
+//			
+//			if(product.getText().contains("IPHONE")) {
+//				product.findElement(By.xpath(".//div/div/button[2]")).click();
+//				System.out.println(product.getText());
+//				break;
+//			}
+//		}
 
-		
-		
+		WebElement prod = products.stream()
+				.filter(product -> product.findElement(By.cssSelector("b")).getText().equals("ADIDAS ORIGINAL"))
+				.findFirst().orElse(null);
+		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+		Thread.sleep(1000);
+		WebElement prod1 = products.stream()
+				.filter(product -> product.findElement(By.cssSelector("b")).getText().equals("ZARA COAT 3")).findFirst()
+				.orElse(null);
+		prod1.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toast-container")));
+//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".ng-animating"))); will take more time, replaced by the below line
+		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
 		driver.findElement(By.cssSelector("button[routerlink*=cart]")).click();
 		List<WebElement> cart = driver.findElements(By.cssSelector(".cartSection h3"));
 		boolean cp = cart.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase("ADIDAS ORIGINAL"));
