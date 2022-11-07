@@ -29,7 +29,7 @@ public class LandingPage extends AbstractComponents {
 	public void loginApplication(String useremail, String password) {
 
 		userEmail.sendKeys(useremail);
-		userEmail.sendKeys(password);
+		userPassword.sendKeys(password);
 		submit.click();
 	}
 

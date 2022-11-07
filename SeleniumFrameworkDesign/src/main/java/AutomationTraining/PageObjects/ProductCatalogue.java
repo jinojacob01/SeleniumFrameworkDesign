@@ -22,7 +22,7 @@ public class ProductCatalogue extends AbstractComponents {
 
 	@FindBy(css = ".col-lg-4")
 	List<WebElement> products;
-	
+
 	@FindBy(css = ".ng-animating")
 	WebElement spinner;
 
