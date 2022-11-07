@@ -26,10 +26,11 @@ public class StandAloneTest {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/client");
 		String productName = "ADIDAS ORIGINAL";
 		LandingPage lp = new LandingPage(driver);
 //		lp.goTo();
-		driver.get("https://rahulshettyacademy.com/client");
+		
 		lp.loginApplication("testuser123@mail.com", "TestUser@123");
 		ProductCatalogue pc = new ProductCatalogue(driver);
 		List<WebElement> products =  pc.getProductList();
