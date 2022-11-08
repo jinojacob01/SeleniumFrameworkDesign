@@ -22,8 +22,6 @@ public class ShoppingCart extends AbstractComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = "button[routerlink*=cart]")
-	WebElement goToCart;
 
 	@FindBy(css = ".cartSection h3")
 	List<WebElement> cartProducts;
@@ -31,19 +29,18 @@ public class ShoppingCart extends AbstractComponents {
 	@FindBy(css = ".totalRow button")
 	WebElement checkOut;
 
-	public void goToCart() {
-		goToCart.click();
+
+
+	public boolean VerifyCartProduct(String productName) {
+		boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
+		return match;
 	}
 
-	public void VerifyCartProduct(String productName) {
-		boolean cp = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
-		Assert.assertTrue(cp);
-	}
-
-	public void CheckOut() {
+	public PaymentPage CheckOut() {
 
 		waitForElementToBeClickable(checkOut);
 		checkOut.click();
+		return new PaymentPage(driver);
 
 	}
 

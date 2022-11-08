@@ -38,7 +38,7 @@ public class PaymentPage extends AbstractComponents {
 	List<WebElement> orders;
 
 	public void selectCountry(String country) {
-		Country.sendKeys("Ind");
+		Country.sendKeys(country);
 		WebElement sug = suggestion.stream().filter(s -> s.getText().equalsIgnoreCase(country)).findFirst()
 				.orElse(null);
 		sug.click();
