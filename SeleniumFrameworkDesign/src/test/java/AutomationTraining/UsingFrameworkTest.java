@@ -45,7 +45,7 @@ public class UsingFrameworkTest {
 		pp.selectCountry(country);
 		pp.placeTheOrder();
 		pp.getOrderId();
-		driver.close();
+		driver.quit();
 	}
 
 }

@@ -44,9 +44,10 @@ public class PaymentPage extends AbstractComponents {
 		sug.click();
 	}
 
-	public void placeTheOrder() {
+	public void placeTheOrder() throws InterruptedException {
 		scrollWindow();
 		waitForElementToBeClickable(placeOrder);
+		Thread.sleep(1000);
 		placeOrder.click();
 	}
 

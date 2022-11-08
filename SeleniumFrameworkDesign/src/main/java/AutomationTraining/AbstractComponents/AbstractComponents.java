@@ -23,19 +23,21 @@ public class AbstractComponents {
 
 	}
 
-	public void waitForElementToDisappearBy(WebElement FindBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.invisibilityOf(FindBy));
+	public void waitForElementToDisappearBy(WebElement FindBy) throws InterruptedException {
+//		one more spinner is hidden in the site so it will take 4 seconds to load the page. hence updating with Thread sleep
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.invisibilityOf(FindBy));		
+		Thread.sleep(1000);
 	}
 
 	public void waitForElementToBeClickable(WebElement FindBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wait.until(ExpectedConditions.elementToBeClickable(FindBy));
 	}
 
 	public void scrollWindow() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,2000)");
+		jse.executeScript("window.scrollBy(0,3000)");
 	}
 
 }
