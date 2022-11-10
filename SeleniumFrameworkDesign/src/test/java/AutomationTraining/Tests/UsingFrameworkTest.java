@@ -1,4 +1,4 @@
-package AutomationTraining;
+package AutomationTraining.Tests;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -14,10 +14,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class UsingFrameworkTest {
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().window().maximize();
+		WebDriver driver = null;
+		
+		
 		String productName = "ADIDAS ORIGINAL";
 		String country = "India";
 		LandingPage lp = new LandingPage(driver);
