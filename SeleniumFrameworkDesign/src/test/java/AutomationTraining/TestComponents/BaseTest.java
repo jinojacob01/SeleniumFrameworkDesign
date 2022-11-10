@@ -8,6 +8,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import AutomationTraining.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,12 +32,12 @@ public class BaseTest {
 		} else if (browserName.equals("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();
-			driver = new ChromeDriver();
+			driver = new FirefoxDriver();
 
 		} else if (browserName.equals("edge")) {
 
 			WebDriverManager.edgedriver().setup();
-			driver = new ChromeDriver();
+			driver = new EdgeDriver();
 
 		}
 
