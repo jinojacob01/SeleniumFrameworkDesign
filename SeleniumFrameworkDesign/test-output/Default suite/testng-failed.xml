@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationTraining.Tests.UsingFrameworkTest">
+      <class name="AutomationTraining.Tests.ErrorValidation">
         <methods>
+          <include name="tearDown"/>
+          <include name="lauchApplication"/>
           <include name="submitOrder"/>
         </methods>
-      </class> <!-- AutomationTraining.Tests.UsingFrameworkTest -->
+      </class> <!-- AutomationTraining.Tests.ErrorValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

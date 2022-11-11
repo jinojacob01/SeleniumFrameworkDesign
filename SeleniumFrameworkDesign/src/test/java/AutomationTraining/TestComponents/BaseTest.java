@@ -10,13 +10,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import AutomationTraining.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	 public WebDriver driver;
+	public WebDriver driver;
+	public LandingPage lp;
 
 	public WebDriver InitializeDriver() throws IOException {
 
@@ -45,17 +48,18 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	
+
+	@BeforeMethod
 	public LandingPage lauchApplication() throws IOException {
 		driver = InitializeDriver();
-		LandingPage lp = new LandingPage(driver);
+		lp = new LandingPage(driver);
 		lp.goTo();
 		return lp;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@AfterMethod
+	public void tearDown() {
+		driver.close();
 	}
 
 }

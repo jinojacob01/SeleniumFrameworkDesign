@@ -30,6 +30,12 @@ public class AbstractComponents {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FindBy));
 
 	}
+	
+	public void waitForWebElementToAppearBy(WebElement FindBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(FindBy));
+
+	}
 
 	public void waitForElementToDisappearBy(WebElement FindBy) throws InterruptedException {
 //		one more spinner is hidden in the site so it will take 4 seconds to load the page. hence updating with Thread sleep
