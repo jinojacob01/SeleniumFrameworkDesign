@@ -49,7 +49,7 @@ public class BaseTest {
 		return driver;
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public LandingPage lauchApplication() throws IOException {
 		driver = InitializeDriver();
 		lp = new LandingPage(driver);
@@ -57,9 +57,9 @@ public class BaseTest {
 		return lp;
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 
 }

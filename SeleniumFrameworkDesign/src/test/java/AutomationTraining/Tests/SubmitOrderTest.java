@@ -12,16 +12,17 @@ import AutomationTraining.PageObjects.LandingPage;
 import AutomationTraining.PageObjects.PaymentPage;
 import AutomationTraining.PageObjects.ProductCatalogue;
 import AutomationTraining.PageObjects.ShoppingCart;
+import AutomationTraining.PageObjects.cartPage;
 import AutomationTraining.TestComponents.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SubmitOrderTest extends BaseTest {
+	String productName = "ADIDAS ORIGINAL";
 
 	@Test
 
 	public void submitOrder() throws InterruptedException, IOException {
 
-		String productName = "ADIDAS ORIGINAL";
 		String country = "India";
 		ProductCatalogue pc = lp.loginApplication("testuser123@mail.com", "TestUser@123");
 		pc.getProductList();
@@ -34,5 +35,13 @@ public class SubmitOrderTest extends BaseTest {
 		pp.placeTheOrder();
 		pp.getOrderId();
 
+	}
+
+	@Test(dependsOnMethods = "submitOrder")
+
+	public void OrderHistoryTest() {
+		ProductCatalogue pc = lp.loginApplication("testuser123@mail.com", "TestUser@123");
+		cartPage cp = pc.goToOrders();
+		Assert.assertTrue(cp.VerifyOrdersPage(productName));
 	}
 }

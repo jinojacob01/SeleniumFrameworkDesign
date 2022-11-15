@@ -12,7 +12,7 @@ import AutomationTraining.TestComponents.BaseTest;
 
 public class ErrorValidationTest extends BaseTest {
 
-	@Test
+	@Test(groups = {"ErrorHandling"})
 
 	public void LoginErrorValidation() throws InterruptedException, IOException {
 		lp.loginApplication("testuser123@mail.com", "TestUser@");
@@ -22,7 +22,7 @@ public class ErrorValidationTest extends BaseTest {
 
 	@Test
 
-	public void submitOrder() throws InterruptedException, IOException {
+	public void VerifyOrder() throws InterruptedException, IOException {
 
 		String productName = "ADIDAS ORIGINAL";
 		ProductCatalogue pc = lp.loginApplication("testuser123456@mail.com", "TestUser@123");
