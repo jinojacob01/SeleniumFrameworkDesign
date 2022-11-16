@@ -1,9 +1,14 @@
 package AutomationTraining.Tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.internal.Debug;
@@ -38,6 +43,16 @@ public class SubmitOrderTest extends BaseTest {
 		pp.getOrderId();
 
 	}
+	
+	public String getScreenshot(String testCaseName) throws IOException {
+		
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source =  ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir")+ "//reports//"+ testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir")+ "//reports//"+ testCaseName + ".png";
+		
+	}
 
 	@Test(dependsOnMethods = "submitOrder")
 
@@ -48,18 +63,33 @@ public class SubmitOrderTest extends BaseTest {
 	}
 
 	@DataProvider
-	public Object[][] getData() {
+	public Object[][] getData() throws IOException {
 
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("email", "testuser123@mail.com");
-		map.put("password", "TestUser@123");
-		map.put("productName", "ADIDAS ORIGINAL");
+		List<HashMap<String, String>> data = getJsonData(
+				System.getProperty("user.dir") + "\\src\\test\\java\\AutomationTraining\\data\\PurchaseOrder.json");
+//		System.out.println(data.size());
+//		for (HashMap<String, String> element : data) {
+//			return new Object[][] { { element }};
+//		}
+//		return null;
 
-		HashMap<String, String> map1 = new HashMap<String, String>();
-		map1.put("email", "testuser123456@mail.com");
-		map1.put("password", "TestUser@123");
-		map1.put("productName", "ZARA COAT 3");
-
-		return new Object[][] { { map }, { map1 } };
+		return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
+
+//	@DataProvider  // for reference, this method has been updated with data from json file
+//	public Object[][] getData() {
+//
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email", "testuser123@mail.com");
+//		map.put("password", "TestUser@123");
+//		map.put("productName", "ADIDAS ORIGINAL");
+//
+//		HashMap<String, String> map1 = new HashMap<String, String>();
+//		map1.put("email", "testuser123456@mail.com");
+//		map1.put("password", "TestUser@123");
+//		map1.put("productName", "ZARA COAT 3");
+//
+//		return new Object[][] { { map }, { map1 } };
+//	}
+
 }
