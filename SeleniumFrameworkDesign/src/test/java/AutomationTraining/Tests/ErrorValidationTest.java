@@ -9,10 +9,11 @@ import AutomationTraining.PageObjects.PaymentPage;
 import AutomationTraining.PageObjects.ProductCatalogue;
 import AutomationTraining.PageObjects.ShoppingCart;
 import AutomationTraining.TestComponents.BaseTest;
+import AutomationTraining.TestComponents.Retry;
 
 public class ErrorValidationTest extends BaseTest {
 
-	@Test(groups = {"ErrorHandling"})
+	@Test(groups = { "ErrorHandling" }, retryAnalyzer = Retry.class)
 
 	public void LoginErrorValidation() throws InterruptedException, IOException {
 		lp.loginApplication("testuser123@mail.com", "TestUser@");

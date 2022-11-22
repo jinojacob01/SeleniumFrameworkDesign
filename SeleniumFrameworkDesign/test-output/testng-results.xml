@@ -1,77 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results retried="1" ignored="0" total="6" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-22T11:05:42 IST" name="Suite" finished-at="2022-11-22T11:06:16 IST" duration-ms="33777">
+  <suite started-at="2022-11-22T12:30:28 IST" name="Suite" finished-at="2022-11-22T12:31:04 IST" duration-ms="36187">
     <groups>
       <group name="ErrorHandling">
-        <method signature="ErrorValidationTest.LoginErrorValidation()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" name="LoginErrorValidation" class="AutomationTraining.Tests.ErrorValidationTest"/>
+        <method signature="ErrorValidationTest.LoginErrorValidation()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" name="LoginErrorValidation" class="AutomationTraining.Tests.ErrorValidationTest"/>
       </group> <!-- ErrorHandling -->
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" name="submitOrder" class="AutomationTraining.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" name="submitOrder" class="AutomationTraining.Tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2022-11-22T11:05:42 IST" name="SubmitOrderTest" finished-at="2022-11-22T11:06:04 IST" duration-ms="21917">
-      <class name="AutomationTraining.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:05:42 IST" name="lauchApplication" finished-at="2022-11-22T11:05:47 IST" duration-ms="5200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lauchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:05:47 IST" name="submitOrder" data-provider="getData" finished-at="2022-11-22T11:05:52 IST" duration-ms="4329" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=TestUser@123, email=testuser123@mail.com, productName=ADIDAS ORIGINAL}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:05:52 IST" name="tearDown" finished-at="2022-11-22T11:05:52 IST" duration-ms="249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:05:52 IST" name="lauchApplication" finished-at="2022-11-22T11:05:55 IST" duration-ms="3017" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lauchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:05:55 IST" name="submitOrder" data-provider="getData" finished-at="2022-11-22T11:06:00 IST" duration-ms="4772" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=TestUser@123, email=testuser123456@mail.com, productName=ZARA COAT 3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:06:00 IST" name="tearDown" finished-at="2022-11-22T11:06:00 IST" duration-ms="257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:06:00 IST" name="lauchApplication" finished-at="2022-11-22T11:06:03 IST" duration-ms="2943" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lauchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:06:03 IST" name="OrderHistoryTest" finished-at="2022-11-22T11:06:04 IST" depends-on-methods="AutomationTraining.Tests.SubmitOrderTest.submitOrder" duration-ms="720" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@29526c05]" started-at="2022-11-22T11:06:04 IST" name="tearDown" finished-at="2022-11-22T11:06:04 IST" duration-ms="187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- AutomationTraining.Tests.SubmitOrderTest -->
-    </test> <!-- SubmitOrderTest -->
-    <test started-at="2022-11-22T11:06:04 IST" name="ErrorValidationTest" finished-at="2022-11-22T11:06:16 IST" duration-ms="11523">
+    <test started-at="2022-11-22T12:30:28 IST" name="ErrorValidationTest" finished-at="2022-11-22T12:30:49 IST" duration-ms="21066">
       <class name="AutomationTraining.Tests.ErrorValidationTest">
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:04 IST" name="lauchApplication" finished-at="2022-11-22T11:06:08 IST" duration-ms="3441" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:28 IST" name="lauchApplication" finished-at="2022-11-22T12:30:37 IST" duration-ms="9063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:08 IST" name="LoginErrorValidation" finished-at="2022-11-22T11:06:09 IST" duration-ms="947" status="FAIL">
+        <test-method retried="true" signature="LoginErrorValidation()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:37 IST" name="LoginErrorValidation" finished-at="2022-11-22T12:30:38 IST" duration-ms="1026" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Incorrect email or password] but found [Incorrect email or password.]]]>
@@ -84,7 +30,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at AutomationTraining.Tests.ErrorValidationTest.LoginErrorValidation(ErrorValidationTest.java:19)
+at AutomationTraining.Tests.ErrorValidationTest.LoginErrorValidation(ErrorValidationTest.java:20)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,52 +47,48 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:806)
 at org.testng.TestRunner.run(TestRunner.java:601)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:09 IST" name="tearDown" finished-at="2022-11-22T11:06:09 IST" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:38 IST" name="tearDown" finished-at="2022-11-22T12:30:39 IST" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:09 IST" name="lauchApplication" finished-at="2022-11-22T11:06:13 IST" duration-ms="4172" status="PASS">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:39 IST" name="lauchApplication" finished-at="2022-11-22T12:30:42 IST" duration-ms="3134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchApplication -->
-        <test-method signature="VerifyOrder()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:13 IST" name="VerifyOrder" finished-at="2022-11-22T11:06:16 IST" duration-ms="2063" status="FAIL">
+        <test-method signature="LoginErrorValidation()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:42 IST" name="LoginErrorValidation" finished-at="2022-11-22T12:30:43 IST" duration-ms="1240" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [false] but found [true]]]>
+              <![CDATA[expected [Incorrect email or password] but found [Incorrect email or password.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password] but found [Incorrect email or password.]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertFalse(Assert.java:78)
-at org.testng.Assert.assertFalse(Assert.java:88)
-at AutomationTraining.Tests.ErrorValidationTest.VerifyOrder(ErrorValidationTest.java:33)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at AutomationTraining.Tests.ErrorValidationTest.LoginErrorValidation(ErrorValidationTest.java:20)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -155,29 +97,89 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:806)
 at org.testng.TestRunner.run(TestRunner.java:601)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:43 IST" name="tearDown" finished-at="2022-11-22T12:30:44 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:44 IST" name="lauchApplication" finished-at="2022-11-22T12:30:47 IST" duration-ms="3018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lauchApplication -->
+        <test-method signature="VerifyOrder()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:47 IST" name="VerifyOrder" finished-at="2022-11-22T12:30:49 IST" duration-ms="2414" status="PASS">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- VerifyOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@531f4093]" started-at="2022-11-22T11:06:16 IST" name="tearDown" finished-at="2022-11-22T11:06:16 IST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.ErrorValidationTest@460ebd80]" started-at="2022-11-22T12:30:49 IST" name="tearDown" finished-at="2022-11-22T12:30:49 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomationTraining.Tests.ErrorValidationTest -->
     </test> <!-- ErrorValidationTest -->
+    <test started-at="2022-11-22T12:30:28 IST" name="SubmitOrderTest" finished-at="2022-11-22T12:31:04 IST" duration-ms="36187">
+      <class name="AutomationTraining.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:28 IST" name="lauchApplication" finished-at="2022-11-22T12:30:47 IST" duration-ms="18328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lauchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:47 IST" name="submitOrder" data-provider="getData" finished-at="2022-11-22T12:30:51 IST" duration-ms="4721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=TestUser@123, email=testuser123@mail.com, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:51 IST" name="tearDown" finished-at="2022-11-22T12:30:52 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:52 IST" name="lauchApplication" finished-at="2022-11-22T12:30:55 IST" duration-ms="2876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lauchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:55 IST" name="submitOrder" data-provider="getData" finished-at="2022-11-22T12:30:59 IST" duration-ms="4677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=TestUser@123, email=testuser123456@mail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:59 IST" name="tearDown" finished-at="2022-11-22T12:30:59 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lauchApplication()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:30:59 IST" name="lauchApplication" finished-at="2022-11-22T12:31:04 IST" duration-ms="4134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lauchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:31:04 IST" name="OrderHistoryTest" finished-at="2022-11-22T12:31:04 IST" depends-on-methods="AutomationTraining.Tests.SubmitOrderTest.submitOrder" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTraining.Tests.SubmitOrderTest@45312be2]" started-at="2022-11-22T12:31:04 IST" name="tearDown" finished-at="2022-11-22T12:31:04 IST" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AutomationTraining.Tests.SubmitOrderTest -->
+    </test> <!-- SubmitOrderTest -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -22,6 +22,7 @@ import AutomationTraining.PageObjects.ProductCatalogue;
 import AutomationTraining.PageObjects.ShoppingCart;
 import AutomationTraining.PageObjects.cartPage;
 import AutomationTraining.TestComponents.BaseTest;
+import AutomationTraining.TestComponents.Retry;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SubmitOrderTest extends BaseTest {
