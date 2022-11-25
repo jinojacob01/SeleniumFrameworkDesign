@@ -13,6 +13,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
+import com.github.dockerjava.api.model.Config;
+
 import AutomationTraining.AbstractComponents.AbstractComponents;
 
 public class PaymentPage extends AbstractComponents {
@@ -36,6 +38,9 @@ public class PaymentPage extends AbstractComponents {
 
 	@FindBy(css = "tbody tr:nth-child(3) td [class = 'ng-star-inserted']")
 	List<WebElement> orders;
+	
+	@FindBy(css=".hero-primary")
+	WebElement conirmMessage;
 
 	public void selectCountry(String country) {
 		Country.sendKeys(country);
@@ -50,6 +55,11 @@ public class PaymentPage extends AbstractComponents {
 		Thread.sleep(1000);
 		placeOrder.click();
 	}
+	
+	public String getConfirmationMessage() {
+		return conirmMessage.getText();
+	}
+	
 
 	public void getOrderId() {
 		orders.stream().forEach(s -> System.out.println(s.getText()));

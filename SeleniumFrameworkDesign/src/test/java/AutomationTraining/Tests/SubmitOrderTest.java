@@ -41,7 +41,9 @@ public class SubmitOrderTest extends BaseTest {
 		PaymentPage pp = sc.CheckOut();
 		pp.selectCountry(country);
 		pp.placeTheOrder();
-		pp.getOrderId();
+		String confirmationMessage = pp.getConfirmationMessage();
+		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+//		pp.getOrderId();
 
 	}
 	
