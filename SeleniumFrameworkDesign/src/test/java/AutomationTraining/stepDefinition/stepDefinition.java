@@ -52,7 +52,13 @@ public class stepDefinition extends BaseTest {
 	public void Confirmation_message_is_displayed(String string) {
 		String confirmationMessage = pp.getConfirmationMessage();
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase(string));
-		driver.quit();
+		driver.close();
+	}
+	
+	@Then("{string} error should be displayed")
+	public void Error_message_should_be_disaplyed(String string) {
+		Assert.assertEquals(lp.getErrorMessage(), string);
+		driver.close();
 	}
 
 }

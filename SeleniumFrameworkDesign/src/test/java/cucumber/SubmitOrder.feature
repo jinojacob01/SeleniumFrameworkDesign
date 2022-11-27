@@ -5,7 +5,7 @@ Feature: Purchase items from Ecomm website
 Background:
 Given I landed on Ecommerce page
 
-  @tag2
+  @Regression
   Scenario Outline: Positive test of submitting the order
   
     Given Logged in with username <username> and password <password>
